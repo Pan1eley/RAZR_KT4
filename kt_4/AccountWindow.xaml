@@ -1,0 +1,40 @@
+﻿<Window  Width="900" Height="600" x:Class="kt_4.AccountWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kt_4"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AccountWindow">
+
+    <Grid>
+        <DataGrid x:Name="DGridMain">
+            <DataGrid.Columns>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Menu VerticalAlignment="Top" Margin="340,12,412,0" Height="18"  Background="Gray" Foreground="Black" Width="NaN">
+            <MenuItem Header="Меню" Width="122" Height="18">
+                <MenuItem Header="Сотрудники" Click="EmployeesMenuItem_Click"/>
+                <MenuItem Header="Оборудование" Click="EquipmentMenuItem_Click"/>
+                <MenuItem Header="Биллинг" Click="BillingMenuItem_Click"/>
+                <MenuItem Header="Договора" Click="ContractsMenuItem_Click"/>
+                <MenuItem Header="Оформление заявки" Click="RequestMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <Image Source="/kt_4;component/Images/1.png" Margin="0,-10,616,322" Width="NaN" />
+        <Calendar HorizontalAlignment="Left" Margin="285,151,0,0" VerticalAlignment="Top" Height="165" Width="248"/>
+        <Button Content="Профиль" HorizontalAlignment="Left" Margin="556,28,0,0" VerticalAlignment="Top" Height="30" Width="85" FontSize="16" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.25"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Выйти из аккаунта" HorizontalAlignment="Left" Margin="664,32,0,0" VerticalAlignment="Top" FontSize="14" Click="Button_Click"/>
+    </Grid>
+</Window>
